@@ -8,5 +8,12 @@ pipeline {
                 }
             }
         }
+        stage('show working directory') {
+            steps {
+                script {
+                    sh "pwd"
+                }
+            }
+        }
     }
 }
