@@ -22,5 +22,12 @@ pipeline {
                 }
             }
         }
+        stage('list build contents') {
+            steps {
+                script {
+                    sh "ls build/libs"
+                }
+            }
+        }
     }
 }
