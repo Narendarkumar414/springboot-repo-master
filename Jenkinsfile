@@ -15,5 +15,12 @@ pipeline {
                 }
             }
         }
+        stage('creating build') {
+            steps {
+                script {
+                    sh "./gradlew clean build"
+                }
+            }
+        }
     }
 }
