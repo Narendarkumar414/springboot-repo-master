@@ -43,10 +43,11 @@ pipeline {
                 }
             }
         }
-        stage('build docker image') {
+        stage('build docker image and pushing to dockerhub') {
             steps {
                 script {
-                    sh "cd DOCKER; sudo docker build -t harshvardhan1402/devops-flow ."
+                    sh "cd DOCKER; sudo docker build -t harshvardhan1402/devops-flow:v_${BUILD_NUMBER} ."
+                    sh "sudo docker push harshvardhan1402/devops-flow:v_${BUILD_NUMBER}"
                 }
             }
         }
