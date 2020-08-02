@@ -32,7 +32,7 @@ pipeline {
         stage('copy buid file to docker build context') {
             steps {
                 script {
-                    sh "sudo cp /build/libs/spring-boot-with-prometheus-0.1.0.jar DOCKER/"
+                    sh "sudo cp /var/lib/jenkins/workspace/sid-narender/pipeline-project/build/libs/spring-boot-with-prometheus-0.1.0.jar DOCKER/"
                 }
             }
         }
