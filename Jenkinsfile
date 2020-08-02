@@ -43,5 +43,12 @@ pipeline {
                 }
             }
         }
+        stage('build docker image') {
+            steps {
+                script {
+                    sh "cd DOCKER; sudo docker build -t harshvardhan1402/devops-flow ."
+                }
+            }
+        }
     }
 }
